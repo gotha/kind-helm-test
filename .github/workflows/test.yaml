@@ -15,6 +15,9 @@ jobs:
   test-deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: which kubectl
+      run: |
+          which -a kubectl
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Set up Helm
@@ -22,7 +25,7 @@ jobs:
     - name: Set up YQ
       uses: dcarbone/install-yq-action@v1
     - name: Kubernetes KinD Cluster
-      uses: gotha/kind-action@v1.12.1-rc9
+      uses: gotha/kind-action@v1.12.1-rc10
       with:
         registry: true
         registry_name: my-registry
