@@ -31,4 +31,4 @@ jobs:
     - name: test
       run: |
         which kubectl
-        which kube
+        which kind
