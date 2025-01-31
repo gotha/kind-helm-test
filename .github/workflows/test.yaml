@@ -22,7 +22,7 @@ jobs:
       #- name: Set up YQ
       #  uses: dcarbone/install-yq-action@v1
     - name: Kubernetes KinD Cluster
-      uses: gotha/kind-action@v1.12.1-rc15
+      uses: gotha/kind-action@v1.12.1-rc16
       with:
         registry: true
         registry_name: my-registry
